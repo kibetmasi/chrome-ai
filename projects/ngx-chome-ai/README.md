@@ -1,4 +1,4 @@
-# NgxChomeAi
+# ngx-chome-ai
 
 Install library ```npm i ngx-chome-ai```
 
