@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class NgxChomeAiService {
 
   /**
-   * This method sends a prompt message to the AI service and returns a response.
+   * Sends a prompt message to the AI service and returns a response.
    * 
    * @param message - The message string to be sent as a prompt.
    * @returns A promise that resolves to a string containing the response from the AI service.
@@ -17,7 +17,7 @@ export class NgxChomeAiService {
   }
 
   /**
-   * This method checks the environment to ensure the browser and AI service are correctly configured.
+   * Checks the environment to ensure the browser and AI service are correctly configured.
    * 
    * @returns An array of error messages (string[]) if any checks fail, or undefined if all checks pass.
    */
