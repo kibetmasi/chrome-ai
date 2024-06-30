@@ -1,5 +1,9 @@
 {
   "name": "ngx-chome-ai",
+  "author": {
+    "email": "masikibe@gmail.com",
+    "name": "Masssiiiii"
+  },
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
