@@ -1,5 +1,5 @@
 {
-  "name": "ngx-chome-ai",
+  "name": "ngx-chrome-ai",
   "author": {
     "email": "masikibe@gmail.com",
     "name": "Masssiiiii",
@@ -16,7 +16,7 @@
   "keywords": [
       "chrome AI"
     ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "peerDependencies": {
     "@angular/common": "^18.0.5",
     "@angular/core": "^18.0.5"

@@ -1,27 +1,34 @@
-# ChromeAi
+# ngx-chome-ai
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Install library ```npm i ngx-chome-ai```
 
-## Development server
+## Enable AI in Chrome
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+> ⚠️ Note:
+> * This module is under development and may contain errors and frequent incompatible changes.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Chrome built-in AI is a preview feature, you need to use chrome version 127 or greater, now in [dev](https://www.google.com/chrome/dev/?extra=devchannel) or [canary](https://www.google.com/chrome/canary/) channel, [may release on stable chanel at Jul 17, 2024](https://chromestatus.com/roadmap).
 
-## Build
+After then, you should turn on these flags:
+* [chrome://flags/#prompt-api-for-gemini-nano](chrome://flags/#prompt-api-for-gemini-nano): `Enabled`
+* [chrome://flags/#optimization-guide-on-device-model](chrome://flags/#optimization-guide-on-device-model): `Enabled BypassPrefRequirement`
+* [chrome://components/](chrome://components/): Click `Optimization Guide On Device Model` to download the model.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Import and run in your project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+import { NgxChomeAiService } from 'ngx-chome-ai';
 
-## Running end-to-end tests
+'chrome-ai' = inject(NgxChomeAiService)
+errors = toSignal<string[] | undefined>(from(this['chrome-ai'].checkEnv()))
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+async sendMessage(message: string) {
+  return await this['chrome-ai'].sendPrompt(message)
+  }
+}
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Docs
+https://developer.chrome.com/docs/ai/built-in
